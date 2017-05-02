@@ -19,7 +19,7 @@ const render = () => {
       onChange={(e) => {
         const value = e.currentTarget.value;
         store.dispatch({ type: 'TYPE', value });
-        getUsers(value).then(list => store.dispatch({ type: 'DATALIST', list}));
+        getUsers(value, list => store.dispatch({ type: 'DATALIST', list}));
       }}
     />,
     rootEl
