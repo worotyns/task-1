@@ -6,7 +6,7 @@ export default (state = defaultState, action) => {
       state.value = action.value;
       break;
     case 'SELECT':
-      state.selected = action.selected;
+      state.selected = state.value;
       break;
     case 'DATALIST':
       state.datalist = action.list;

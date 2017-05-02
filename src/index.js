@@ -14,6 +14,8 @@ const render = () => {
     <User
       value={state.value}
       datalist={state.datalist}
+      selected={state.selected}
+      onSelect={() => store.dispatch({type: 'SELECT'})}
       onChange={(e) => {
         const value = e.currentTarget.value;
         store.dispatch({ type: 'TYPE', value });
